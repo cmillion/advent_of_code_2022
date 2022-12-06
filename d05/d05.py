@@ -18,7 +18,8 @@ def pad_right(stack):
     return [s.ljust(max_len) for s in stack]
 
 # given an list of strings, make a list of list of characters in each string
-def stack_to_list(stack):
+# use type hints to specify that the input is a list of strings and the output is a list of lists of characters
+def stack_to_list(stack: list) -> list:
     return [list(s) for s in stack]
 
 def get_stack_dict(fn,n=3):
@@ -47,14 +48,14 @@ def parse_instructions(fn,n):
 stack_dict = get_stack_dict('d05_test.txt',n=3)
 for instruction in parse_instructions('d05_test.txt',n=5):
     stack_dict = execute_instruction(stack_dict,instruction)
-    print(stack_dict)
+    #print(stack_dict)
 top_stock = ''.join([stack_dict[k][0] for k in stack_dict.keys()])
 assert top_stock == 'CMZ'
 
 stack_dict = get_stack_dict('d05.txt',n=8)
 for instruction in parse_instructions('d05.txt',n=10):
     stack_dict = execute_instruction(stack_dict,instruction)
-    print(stack_dict)
+    #print(stack_dict)
 top_stock = ''.join([stack_dict[k][0] for k in stack_dict.keys()])
 print(f"Part 1: {top_stock}")
 
@@ -68,13 +69,13 @@ def execute_instruction_new(stack_dict,instruction):
 stack_dict = get_stack_dict('d05_test.txt',n=3)
 for instruction in parse_instructions('d05_test.txt',n=5):
     stack_dict = execute_instruction_new(stack_dict,instruction)
-    print(stack_dict)
+    #print(stack_dict)
 top_stock = ''.join([stack_dict[k][0] for k in stack_dict.keys()])
 assert top_stock == 'MCD'
 
 stack_dict = get_stack_dict('d05.txt',n=8)
 for instruction in parse_instructions('d05.txt',n=10):
     stack_dict = execute_instruction_new(stack_dict,instruction)
-    print(stack_dict)
+    #print(stack_dict)
 top_stock = ''.join([stack_dict[k][0] for k in stack_dict.keys()])
 print(f"Part 2: {top_stock}")

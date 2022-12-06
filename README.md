@@ -9,3 +9,4 @@ As an experiment, I'm going to rely heavily on Github Copilot
 (which I have never previously used) to see how much it really helps.
 
 Score: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+:star: :star:
